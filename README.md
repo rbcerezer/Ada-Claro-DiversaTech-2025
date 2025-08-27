@@ -31,7 +31,7 @@ curl "https://api.ipify.org?format=json"
 Resposta esperada:
 
 json
-Copiar código
+
 {
   "ip": "187.45.221.120"
 }
@@ -44,14 +44,14 @@ mvn spring-boot:run
 Envie um ticket de teste:
 
 bash
-Copiar código
+
 curl -X POST http://localhost:8080/tickets \
 -H "Content-Type: application/json" \
 -d '{"descricao":"Cliente sem internet"}'
 Resposta de exemplo:
 
 json
-Copiar código
+
 {
   "id": 1,
   "descricao": "Cliente sem internet",
@@ -75,7 +75,7 @@ Registrar o ticket mesmo sem IP (ipOrigem = "indisponível").
 Exemplo de log:
 
 json
-Copiar código
+
 {
   "level": "WARN",
   "timestamp": "2025-08-27T15:45:12",
@@ -98,7 +98,7 @@ Revisar dependências externas e conexões do serviço.
 Exemplo de log:
 
 json
-Copiar código
+
 {
   "level": "ERROR",
   "timestamp": "2025-08-27T15:50:22",
@@ -122,7 +122,7 @@ Comunicar gestores e stakeholders-chave.
 Exemplo de log:
 
 json
-Copiar código
+
 {
   "level": "FATAL",
   "timestamp": "2025-08-27T15:55:40",
