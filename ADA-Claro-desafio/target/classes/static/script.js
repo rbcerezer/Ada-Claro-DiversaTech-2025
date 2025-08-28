@@ -217,3 +217,24 @@ setTimeout(() => {
     addSearchFunctionality();
 }, 1000);
 
+//endpoints rest
+const API = "http:localhost:8080/api/users";
+async function getUsers() {
+    const response = await fetch(API);
+    const users = await response.json();
+    console.log(users);
+}
+
+
+//POST
+async function createUser(user) {
+    const response = await fetch(API, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    });
+    const newUser = await response.json();
+    console.log(newUser);
+}
